@@ -1,0 +1,132 @@
+@import url('reset.css');
+
+:root {
+    --primary-font: 'Space Mono', monospace;
+    --secondary-font: 'Inconsolata', monospace;
+    --footer-font: 'Montserrat', sans-serif;
+
+    --primary-color: #333333;
+    --paragraph-color: #4f4f4f;
+    --footer-color: #bdbdbd;
+
+    font-size: 62.5%;
+}
+
+body {
+    color: var(--primary-color);
+    font-family: var(--primary-font);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    margin-inline: 3rem;
+    height: 100vh;
+}
+
+header {
+    font-family: var(--secondary-font);
+    font-size: 2.4rem;
+    padding: 2rem 0;
+}
+
+main {
+    flex: 1;
+    padding-bottom: 5rem;
+}
+
+.page-content {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+.page-content img {
+    max-width: 30rem;
+    align-self: center;
+}
+
+.page-content div {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+.page-content div h1 {
+    font-size: 4.2rem;
+}
+
+.page-content div p {
+    font-size: 1.8rem;
+}
+
+.page-content div a {
+    display: block;
+    background-color: var(--primary-color);
+    color: white;
+    max-width: 21rem;
+    text-align: center;
+    padding: 2rem;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+}
+
+footer {
+    padding: 1rem 0;
+    text-align: center;
+    font-family: var(--footer-font);
+    color: var(--footer-color);
+}
+
+footer a {
+    color: var(--paragraph-color);
+    text-decoration: underline;
+}
+
+@media (min-width: 720px) {
+    .container {
+        max-width: 720px;
+        margin-inline: auto;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        max-width: 1024px;
+        margin-inline: auto;
+    }
+
+    main {
+        padding-bottom: 0;
+        display: flex;
+        align-items: center;
+    }
+
+    .page-content {
+        flex-direction: row;        
+    }
+
+    .page-content img {
+        max-width: 50rem;        
+    }
+
+    .page-content div {
+        justify-content: space-between;
+    }
+
+    .page-content div h1 {
+        font-size: 6.4rem;
+    }
+
+    .page-content div p {
+        max-width: 30ch;
+        font-size: 2.4rem;
+    }
+}
+
+@media (min-width: 1920px) {
+    .container {
+        max-width: 1440px;
+        margin-inline: auto;
+    }
+}
